@@ -75,7 +75,7 @@ const partnerSlider = new Swiper('.swiper.is-partner', {
   	delay: 0,
     disableOnInteraction: false,
  	},
-  speed: 5000,
+  speed: 6000,
   
   // Navigation arrows
   navigation: {
