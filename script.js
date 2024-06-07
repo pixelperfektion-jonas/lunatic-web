@@ -102,3 +102,21 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+const partnerSlider = new Swiper('.swiper.is-partner', {
+   // Optional parameters  
+  loop: true,
+  slidesPerView: 'auto',
+  spaceBetween: 96,
+  autoplay: {
+  	delay: 0,
+    disableOnInteraction: false,
+ 	},
+  speed: 6000,
+  
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-btn-next.is-aboutus',
+    prevEl: '.swiper-btn-prev.is-aboutus',
+  },
+});
