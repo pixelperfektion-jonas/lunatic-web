@@ -94,7 +94,6 @@ document.addEventListener("DOMContentLoaded", function () {
   cmsItems.forEach(function (item) {
     // Textinhalt des Elements erhalten
     var text = item.innerText || item.textContent;
-
     // Text in Worte aufteilen
     var words = text.split(" ");
 
@@ -135,10 +134,8 @@ document.addEventListener("DOMContentLoaded", function () {
   partnerElements.forEach(function (partnerElement) {
     // Hole den Wert des CMS-Feldes 'Logo-Skalierungsfaktor' für dieses Partner-Element
     var scaleFactor = parseFloat(partnerElement.dataset.logoSkalierungsfaktor);
-
     // Selektiere das Logo-Bild-Element innerhalb des aktuellen Partner-Elements
     var logoImage = partnerElement.querySelector(".swiper-logo-img");
-
     // Wende die Skalierung auf das Logo-Bild-Element an, falls vorhanden
     if (logoImage) {
       logoImage.style.transform = "scale(" + scaleFactor + ")";
@@ -146,12 +143,16 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-document.getElementById("email").addEventListener("blur", function () {
-  validateEmail();
+document.addEventListener('DOMContentLoaded', function () {
+  const emailInput = document.getElementById('email');
+  if (emailInput) {
+    emailInput.addEventListener('blur', validateEmail);
+  }
 });
 
 function validateEmail() {
   const emailInput = document.getElementById("email");
+  if (!emailInput) return;
   const emailValue = emailInput.value;
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
