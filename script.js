@@ -1,6 +1,6 @@
 const projektloesungenSlider = new Swiper(".swiper.is-projektloesungen", {
   // Optional parameters
-  loop: true,
+  loop: false,
   slidesPerView: 3,
   spaceBetween: 16,
   speed: 750,
