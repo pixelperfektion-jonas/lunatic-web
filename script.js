@@ -1,6 +1,6 @@
 const projektloesungenSlider = new Swiper(".swiper.is-projektloesungen", {
   // Optional parameters
-  loop: false,
+  loop: true,
   slidesPerView: 3,
   spaceBetween: 16,
   speed: 750,
@@ -27,7 +27,7 @@ const projektloesungenSlider = new Swiper(".swiper.is-projektloesungen", {
 
 const socialproofSlider = new Swiper(".swiper.is-social-proof", {
   // Optional parameters
-  loop: true,
+  loop: false,
   slidesPerView: 1.5,
   spaceBetween: 16,
   speed: 750,
