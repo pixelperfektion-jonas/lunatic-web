@@ -85,6 +85,41 @@ const aboutusSlider = new Swiper(".swiper.is-aboutus", {
   },
 });
 
+const aboutusSlider = new Swiper(".swiper.is-services", {
+  // Optional parameters
+  preloadImages: true,
+  lazy: {
+    loadPrevNext: true,
+    loadPrevNextAmount: 4,
+  },
+  loop: true,
+  slidesPerView: 2.5,
+  spaceBetween: 16,
+  allowTouchMove: false,
+  autoplay: {
+    delay: 0,
+    disableOnInteraction: false,
+  },
+  speed: 6000,
+  breakpoints: {
+    320: {
+      slidesPerView: 1.5,
+    },
+    480: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 2.5,
+    },
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-btn-next.is-aboutus",
+    prevEl: ".swiper-btn-prev.is-aboutus",
+  },
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   // Alle Elemente mit der Klasse 'text-team-member-name' und dem Custom Attribute 'data-break-after' auswählen
   var cmsItems = document.querySelectorAll(
